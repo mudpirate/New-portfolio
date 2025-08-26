@@ -33,17 +33,17 @@ const Hero = () => {
       </div>
 
       {/* Grid background */}
-      <div className="h-screen w-full dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
+      <div className="h-[100vh] w-full dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
         <div
-          className="absolute inset-0 flex items-center justify-center dark:bg-black-100
+          className="absolute inset-0 h-[100vh] flex items-center justify-center dark:bg-black-100
           [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] 
           bg-gradient-to-b from-black/40 to-purple"
         />
       </div>
 
       {/* Content */}
-      <div className="flex justify-center relative z-10">
-        <div className="w-full px-4 max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+      <div className="flex justify-center  relative z-10">
+        <div className="w-full px-4 max-w-[89vw] h-full md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="I build scalable web apps and modern full stack websites."
             className="text-center text-[32px] sm:text-[36px] md:text-5xl lg:text-6xl"

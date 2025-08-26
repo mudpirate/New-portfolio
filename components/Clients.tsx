@@ -8,9 +8,9 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 const Clients = () => {
   return (
     <section id="testimonials" className="py-14">
-      <h1 className="heading mb-10">
+      <h1 className="heading text-white mb-10">
         I create magic
-        <span className="text-purple"> with these tools</span>
+        <span className="text-purple "> with these tools</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
@@ -26,7 +26,7 @@ const Clients = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-8">
-          <h1 className="heading2">
+          <h1 className="heading2 text-white">
             I build scalable apps and projects{" "}
             <span className="text-purple">
               with T3, MERN, and Python FastAPI, designed to grow with your

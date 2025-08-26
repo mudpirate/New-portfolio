@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
+        <h1 className="heading text-white lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
           presence to the next level?
         </h1>
@@ -45,13 +45,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex mt-16 md:gap-10 gap-5 flex-col md:flex-row justify-center items-center font-sans">
-        <p className="md:text-2xl text-md md:font-normal font-medium">
+        <p className="md:text-2xl text-white text-md md:font-normal font-medium">
           nomeshsingh33@gmail.com
         </p>
       </div>
 
       <div className="flex mt-16  flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
+        <p className="md:text-base text-white text-sm md:font-normal font-light">
           Made with ❤️ by Nomesh Singh
         </p>
       </div>

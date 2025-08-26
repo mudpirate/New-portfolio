@@ -7,7 +7,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 relative overflow-x-hidden overflow-y-hidden">
+    <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center">
       {/* Spotlights */}
       <div className="absolute inset-0 overflow-hidden">
         <Spotlight
@@ -48,9 +48,11 @@ const Hero = () => {
             words="I build scalable web apps and modern full stack websites."
             className="text-center text-[32px] sm:text-[36px] md:text-5xl lg:text-6xl"
           />
-          <p className="text-center md:tracking-wider mb-4 text-white text-sm sm:text-base md:text-lg lg:text-2xl">
-            Hi! I&apos;m Nomesh, a passionate full-stack developer.
-          </p>
+
+          <TextGenerateEffect
+            words=" Hi! I'm Nomesh, a passionate full-stack developer."
+            className="text-center md:tracking-wider mb-4 text-white text-sm sm:text-base md:text-lg lg:text-2xl"
+          />
 
           <a href="#about">
             <MagicButton

@@ -9,7 +9,7 @@ const Clients = () => {
   return (
     <section
       id="testimonials"
-      className="mt-16 sm:mt-20 md:mt-24 lg:mt-26 py-10 md:py-14 lg:py-20 px-4 sm:px-6 lg:px-8"
+      className="mt-16 sm:mt-20  md:mt-24 lg:mt-26 py-10 md:py-14 lg:py-20 px-4 sm:px-6 lg:px-8"
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-10 text-center">
         I create magic
@@ -25,8 +25,8 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center text-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-white max-w-xl">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center w-full max-w-5xl  justify-center text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl  font-medium text-white max-w-4xl">
             I build scalable apps and projects{" "}
             <span className="text-purple">
               with T3, MERN, and Python FastAPI frameworks.

@@ -38,7 +38,7 @@ const Footer = () => {
             >
               <div
                 key={info.id}
-                className="w-100 h-100 cursor-pointer gap-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg "
+                className="w-100 h-100 cursor-pointer gap-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75  rounded-lg "
               >
                 <img src={info.img} alt="icons" width={100} height={100} />
               </div>

@@ -72,7 +72,17 @@
   }
   body {
     @apply bg-background text-foreground;
+
+    /* ✨ Add global grid background */
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed; /* stays in place */
   }
+
   button {
     @apply active:outline-none;
   }
@@ -84,5 +94,19 @@
   }
   .heading2 {
     @apply font-bold text-4xl md:text-4xl text-center;
+  }
+
+  /* Optional radial spotlight fade (like your old Grid component) */
+  .spotlight {
+    mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 20%,
+      black 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 20%,
+      black 100%
+    );
   }
 }

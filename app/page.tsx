@@ -42,8 +42,8 @@ const RecentProjects = dynamic(
 
 const Home = () => {
   return (
-    <main className="relative bg-black flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
+    <main className="bg-black flex flex-col overflow-x-hidden min-h-screen w-full">
+      <div className="overflow-x-hidden w-full max-w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
         <Clients />

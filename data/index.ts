@@ -112,7 +112,7 @@ export const testimonials = [
     image: "/py.svg",
   },
   {
-    image: "/Redux.svg",
+    image: "/redux.svg",
   },
   {
     image: "/PostgresSQL.svg",

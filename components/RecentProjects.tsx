@@ -9,8 +9,8 @@ const RecentProjects = () => {
   return (
     <div className="py-20">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        Few of my Innovative
+        <span className="text-purple"> Projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
@@ -65,11 +65,24 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                <div className="flex justify-center gap-4 items-center">
+                  <div className="flex items-center">
+                    <p className="flex lg:text-xl md:text-xs text-sm text-white">
+                      Github
+                    </p>
+                    <div>
+                      <FaLocationArrow className="ms-1" color="#CBACF9" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center">
+                    <p className="flex lg:text-xl md:text-xs text-sm text-white">
+                      Live
+                    </p>
+                    <div>
+                      <FaLocationArrow className="ms-1" color="#CBACF9" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </PinContainer>

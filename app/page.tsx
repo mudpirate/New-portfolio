@@ -1,15 +1,44 @@
 "use client";
 
 import { navItems } from "@/data";
-
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import dynamic from "next/dynamic";
+
+// load only on client (no SSR)
+const FloatingNav = dynamic(
+  () => import("@/components/ui/FloatingNavbar").then((mod) => mod.FloatingNav),
+  { ssr: false }
+);
+
+const Hero = dynamic(
+  () => import("@/components/Hero").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const Grid = dynamic(
+  () => import("@/components/Grid").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const Clients = dynamic(
+  () => import("@/components/Clients").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const Approach = dynamic(
+  () => import("@/components/Approach").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const Experience = dynamic(
+  () => import("@/components/Experience").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const RecentProjects = dynamic(
+  () => import("@/components/RecentProjects").then((mod) => mod.default),
+  { ssr: false }
+);
 
 const Home = () => {
   return (
@@ -21,7 +50,6 @@ const Home = () => {
         <Grid />
         <RecentProjects />
         <Experience />
-
         <Footer />
       </div>
     </main>

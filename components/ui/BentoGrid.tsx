@@ -1,8 +1,10 @@
+"use client";
+
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
@@ -10,6 +12,8 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export const BentoGrid = ({
   className,

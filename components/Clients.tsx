@@ -7,7 +7,7 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
   return (
-    <section id="testimonials" className="py-14">
+    <section id="testimonials" className="mt-20 md:mt-2 md:py-14 ">
       <h1 className="heading text-white mb-10">
         I create magic
         <span className="text-purple "> with these tools</span>

@@ -29,8 +29,7 @@ const Clients = () => {
           <h1 className="heading2 text-white">
             I build scalable apps and projects{" "}
             <span className="text-purple">
-              with T3, MERN, and Python FastAPI, designed to grow with your
-              vision.
+              with T3, MERN, and Python FastAPI frameworks.
             </span>
           </h1>
         </div>

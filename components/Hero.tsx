@@ -55,20 +55,12 @@ const Hero = () => {
             words="Hey I'm Nomesh , a Full-Stack Developer."
             className="text-center md:tracking-wider mb-4 text-white text-sm sm:text-base md:text-lg lg:text-2xl"
           />
-          <div className="flex gap-6 mt-20">
+          <div className="flex gap-6 ">
             <a href="#testimonials">
-              <MagicButton
-                title="Explore More"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
+              <MagicButton title="Explore More" position="right" />
             </a>
             <a href="/resume.pdf" download>
-              <MagicButton
-                title="Download Resume"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
+              <MagicButton title="Download Resume" position="right" />
             </a>
           </div>
         </div>

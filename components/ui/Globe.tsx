@@ -92,7 +92,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // ✅ skip on server
     if (globeRef.current) {
       _buildData();
       _buildMaterial();
@@ -108,8 +107,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
       emissiveIntensity: number;
       shininess: number;
     };
-    globeMaterial.color = new Color("#004700"); // base
-    globeMaterial.emissive = new Color("#5CFF5C"); // glowing tint
+    globeMaterial.color = new Color(globeConfig.globeColor);
+    globeMaterial.emissive = new Color(globeConfig.emissive);
     globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
     globeMaterial.shininess = globeConfig.shininess || 0.9;
   };
@@ -204,7 +203,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // ✅ skip on server
     if (!globeRef.current || !globeData) return;
 
     const interval = setInterval(() => {
@@ -220,7 +218,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
       );
     }, 2000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
   }, [globeRef.current, globeData]);
 
   return (
@@ -234,11 +234,10 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // ✅ guard for SSR
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, [gl, size]);
+  }, []);
 
   return null;
 }

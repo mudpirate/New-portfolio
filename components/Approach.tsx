@@ -7,14 +7,17 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        How <span className="text-purple">I build things</span>
+      </h1>
+      <h1 className=" mt-3 flex items-center justify-center gap-2">
+        <span className="bg-purple/20 px-3 py-2 rounded-lg">click/hover</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
           title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
+          icon={<AceternityIcon order="Level 1" />}
           des="I'll collaborate to map out your website's goals, target audience, 
           and key functionalities. We'll discuss things like site structure, 
           navigation, and content requirements."
@@ -27,7 +30,7 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
+          icon={<AceternityIcon order="Level 2" />}
           des="Once we agree on the plan, I cue my lofi playlist and dive into
           coding. From initial sketches to polished code, I keep you updated
           every step of the way."
@@ -49,7 +52,7 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
+          icon={<AceternityIcon order="Level 3" />}
           des="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your website
           from the ground up."
@@ -86,21 +89,15 @@ const Card = ({
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
-      style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
+       dark:border-white/[0.2] bg-gradient-to-b from-purple/20 to-black/80 max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
+      // style={{
+      //   //   add these two
+      //   //   you can generate the color from here https://cssgradient.io/
+      //   background: "rgb(4,7,29)",
+      //   backgroundColor:
+      //     "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+      // }}
     >
-      {/* change to h-10 w-10 , add opacity-30  */}
-      <Icon className="absolute h-10 w-10 -top-3 -left-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-3 -right-3 dark:text-white text-black opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -right-3 dark:text-white text-black opacity-30" />
-
       <AnimatePresence>
         {hovered && (
           <motion.div

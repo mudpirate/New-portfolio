@@ -10,7 +10,7 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 const GridGlobe = () => {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#9333ea",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
@@ -30,7 +30,8 @@ const GridGlobe = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#f472b6", "#9333ea", "#3b82f6"]; // pink → purple → blue
+
   const sampleArcs = [
     {
       order: 1,
@@ -397,7 +398,7 @@ const GridGlobe = () => {
   return (
     // remove dark:bg-black bg-white h-screen md:h-auto  w-full flex-row py-20
     // change absolute -left-5 top-36, add w-full h-full md:top-40
-    <div className="absolute inset-0 flex items-center justify-center w-full h-[600px]">
+    <div className="absolute inset-0 flex items-center justify-center top-15 sm:top-20 w-full   h-[500px]">
       <World data={sampleArcs} globeConfig={globeConfig} />
     </div>
   );

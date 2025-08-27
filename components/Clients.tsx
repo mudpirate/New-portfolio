@@ -16,8 +16,8 @@ const Clients = () => {
         <span className="text-purple"> with these tools</span>
       </h1>
 
-      <div className="flex flex-col  items-center">
-        <div className="w-full  max-w-[1400px] h-[25rem] sm:h-[28rem] md:h-[25rem]  rounded-md relative overflow-hidden">
+      <div className="flex flex-col   items-center">
+        <div className="w-full  max-w-[1400px] h-[22rem]  rounded-md relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
@@ -25,11 +25,12 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap items-center w-full max-w-5xl  justify-center text-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl  font-medium text-white max-w-4xl">
-            I build scalable apps and projects{" "}
-            <span className="text-purple">
-              with T3, MERN, and Python FastAPI frameworks.
+        <div className="flex flex-col  sm:flex-row flex-wrap items-center w-full max-w-5xl  justify-center text-center">
+          <h2 className="text-3xl  font-medium text-white max-w-4xl">
+            I craft scalable apps with Next.js, React, TypeScript, Express,
+            Tailwind CSS, and React Native. {""}
+            <span className="text-purple ">
+              blending problem-solving with clean UI/UX.
             </span>
           </h2>
         </div>

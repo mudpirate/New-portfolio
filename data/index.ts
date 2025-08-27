@@ -44,7 +44,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Driven by Curiosity, Building with Innovation",
+    title: "Driven by Curiosity, Building with Innovation.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-6",
     imgClassName: "",

@@ -55,7 +55,7 @@ export const projects = [
     title: "ZenFunds",
     des: `ZenFunds, A modern finance managing app  with advanced AI-powered report analysis, giving clear insights into your income, expenses, and savings. It features a real-time dashboard to monitor spending, predict cash flow, and suggest smarter saving strategies.`,
     img: "/ww.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
     link: "https://zenfunds.vercel.app",
     git: "https://github.com/mudpirate/Zenfunds",
   },
@@ -83,7 +83,7 @@ export const projects = [
     des: " A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.",
     img: "/image1.webp",
     git: "https://github.com/mudpirate/e-commerce",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg"],
     link: "https://e-commerce-one-lyart-97.vercel.app",
   },
 ];

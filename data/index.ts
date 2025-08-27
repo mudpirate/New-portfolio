@@ -1,3 +1,18 @@
+import ReactIcon from "@/src/assets/react.svg";
+import NextIcon from "@/src/assets/next.svg";
+import TailIcon from "@/src/assets/tail.svg";
+import TsIcon from "@/src/assets/ts.svg";
+import ExIcon from "@/src/assets/ex.svg";
+import CIcon from "@/src/assets/c.svg";
+import PyIcon from "@/src/assets/py.svg";
+import ReduxIcon from "@/src/assets/redux.svg";
+import PostgresIcon from "@/src/assets/PostgresSQL.svg";
+import MysqlIcon from "@/src/assets/MySQL.svg";
+import MongoIcon from "@/src/assets/MongoDB.svg";
+import AwsIcon from "@/src/assets/awss.svg";
+import CppIcon from "@/src/assets/cpp.svg";
+import GitIcon from "@/src/assets/git.svg";
+
 export const navItems = [
   { name: "About ", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -89,50 +104,20 @@ export const projects = [
 ];
 
 export const testimonials = [
-  {
-    image: "/react.svg",
-  },
-  {
-    image: "/next.svg",
-  },
-  {
-    image: "/tail.svg",
-  },
-  {
-    image: "/ts.svg",
-  },
-  {
-    image: "/ex.svg",
-  },
-
-  {
-    image: "/c.svg",
-  },
-  {
-    image: "/py.svg",
-  },
-  {
-    image: "/redux.svg",
-  },
-  {
-    image: "/PostgresSQL.svg",
-  },
-  {
-    image: "/MySQL.svg",
-  },
-
-  {
-    image: "/MongoDB.svg",
-  },
-  {
-    image: "/awss.svg",
-  },
-  {
-    image: "/cpp.svg",
-  },
-  {
-    image: "/git.svg",
-  },
+  { image: ReactIcon },
+  { image: NextIcon },
+  { image: TailIcon },
+  { image: TsIcon },
+  { image: ExIcon },
+  { image: CIcon },
+  { image: PyIcon },
+  { image: ReduxIcon },
+  { image: PostgresIcon },
+  { image: MysqlIcon },
+  { image: MongoIcon },
+  { image: AwsIcon },
+  { image: CppIcon },
+  { image: GitIcon },
 ];
 
 export const companies = [

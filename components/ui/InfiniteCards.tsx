@@ -110,6 +110,7 @@ export const InfiniteMovingCards = ({
               width={200} // adjust as per your layout
               height={200} // adjust as per your layout
               className="relative z-20 rounded-lg object-cover "
+              priority
             />
           </li>
         ))}

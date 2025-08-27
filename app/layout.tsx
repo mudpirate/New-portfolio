@@ -6,9 +6,26 @@ import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// app/layout.tsx
 export const metadata: Metadata = {
-  title: "Nomesh singh",
-  description: "Portfolio of Nomesh Singh - Full Stack Developer",
+  title: "Nomesh Singh Portfolio",
+  description:
+    "Full Stack Developer | Building real life & AI-powered projects.",
+  openGraph: {
+    title: "Nomesh Singh Portfolio",
+    description:
+      "Full Stack Developer | Building real life & AI-powered projects.",
+    url: "https://nomeshportfoliowebsite.vercel.app",
+    type: "website",
+    images: [
+      {
+        url: "https://nomeshportfoliowebsite.vercel.app/11.PNG",
+        width: 1200,
+        height: 630,
+        alt: "Nomesh Singh Portfolio Preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

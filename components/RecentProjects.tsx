@@ -19,17 +19,11 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer title="Made with ❤️ by Nomesh Singh">
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
+              <div className="relative flex items-center justify-center sm:w-96 w-80 overflow-hidden h-[26vh] lg:h-[30vh] mb-10">
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute  h-[30vh]   bottom-0"
+                  className="z-10 absolute w-80 sm:w-full  h-[30vh] object-cover object-top bottom-0"
                 />
               </div>
 

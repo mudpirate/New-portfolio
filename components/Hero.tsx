@@ -5,6 +5,7 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import GridGlobe from "./ui/GridGlobe";
+import { Particles } from "@/src/components/magicui/particles";
 
 const Hero = () => {
   return (
@@ -21,8 +22,8 @@ const Hero = () => {
       <div className="h-[100vh] w-full dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
         <div
           className="absolute inset-0 h-[100vh] flex items-center justify-center dark:bg-black-100
-          [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] 
-          bg-gradient-to-b from-black/80 to-purple"
+         
+          bg-gradient-to-b from-black/90 via-black/80 to-purple/40"
         />
       </div>
 

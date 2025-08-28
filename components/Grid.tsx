@@ -2,11 +2,12 @@
 
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import { Particles } from "@/src/components/magicui/particles";
 
 const Grid = () => {
   return (
-    <section id="about">
-      <BentoGrid className="w-full py-20 px-3">
+    <section>
+      <BentoGrid className="w-full  pb-20 pt-4 px-3">
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}

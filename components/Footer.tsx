@@ -5,10 +5,11 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Link from "next/link";
+import { Particles } from "@/src/components/magicui/particles";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full relative pt-20 pb-10" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
@@ -40,15 +41,15 @@ const Footer = () => {
                 key={info.id}
                 className="w-100 h-100 cursor-pointer gap-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75  rounded-lg "
               >
-                <img src={info.img} alt="icons" width={100} height={100} />
+                <img src={info.img} alt="icons" width={70} height={70} />
               </div>
             </Link>
           ))}
         </div>
       </div>
       <div className="flex mt-16 md:gap-10 gap-5 flex-col md:flex-row justify-center items-center font-sans">
-        <p className="md:text-2xl text-white text-md md:font-normal font-medium">
-          nomeshsingh33@gmail.com
+        <p className="md:text-2xl text-white text-md md:font-bold font-bold">
+          Gmail - nomeshsingh33@gmail.com
         </p>
       </div>
 

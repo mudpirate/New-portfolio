@@ -2,10 +2,11 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+import { Particles } from "@/src/components/magicui/particles";
 
 const Approach = () => {
   return (
-    <section className="w-full px-3 py-15 ">
+    <section className="w-full relative px-3 py-15 ">
       <h1 className="heading">
         How <span className="text-purple">I build things</span>
       </h1>
@@ -89,7 +90,7 @@ const Card = ({
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2] bg-gradient-to-b from-purple/20 to-black/80 max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
+       dark:border-white/[0.2] bg-black/50 max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
       // style={{
       //   //   add these two
       //   //   you can generate the color from here https://cssgradient.io/

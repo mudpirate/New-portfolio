@@ -3,10 +3,11 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { Particles } from "@/src/components/magicui/particles";
 
 const Experience = () => {
   return (
-    <div className="py-20 px-3 w-full">
+    <div className="py-20 relative px-3 w-full">
       <h1 className="heading text-white">
         My <span className="text-purple">Tech Domains</span>
       </h1>
@@ -30,12 +31,7 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 bg-black dark:border-slate-800"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
-              />
+            <div className="flex  items-center justify-center py-12 px-8 md:px-4 ">
               <div className="lg:ms-5">
                 <h1 className="text-start text-white text-xl md:text-2xl font-bold">
                   {card.title}

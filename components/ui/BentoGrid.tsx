@@ -23,7 +23,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10 mx-auto ",
+        "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-4 mx-auto ",
         className
       )}
     >
@@ -72,21 +72,21 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col justify-between space-y-4 bg-black/40 ",
+        "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col justify-between space-y-3 bg-black/40 ",
         className
       )}
     >
       <div
-        className={`${id === 6 ? "flex justify-center" : ""} h-full relative`}
+        className={`${id === 6 ? "flex justify-center " : ""} h-full relative`}
       >
         {/* Main Image */}
         {img && (
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 rounded-2xl overflow-hidden">
             <img
               src={img}
               alt={img}
               className={cn(
-                "object-cover object-center w-full h-full",
+                "object-cover object-center w-full h-full", // remove rounded here
                 imgClassName
               )}
             />

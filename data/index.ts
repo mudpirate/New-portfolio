@@ -30,7 +30,7 @@ export const gridItems = [
       "lg:col-span-3 md:col-span-6 md:row-span-4  lg:min-h-[60vh]  bg-gray/50   ",
     imgClassName: "w-full h-full object-cover object-top  ",
 
-    titleClassName: " h-full  ",
+    titleClassName: " h-full ",
     img: "/app.png",
     spareImg: "",
   },

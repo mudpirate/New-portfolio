@@ -111,7 +111,7 @@ export const BentoGridItem = ({
         {/* Background Animation */}
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold pointer-events-none text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center"></div>
+            <div className="absolute z-50 inset-0 flex items-center justify-center font-bold pointer-events-none text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center"></div>
           </BackgroundGradientAnimation>
         )}
 
@@ -131,7 +131,7 @@ export const BentoGridItem = ({
 
           {/* Title */}
           {title && (
-            <div className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-full">
+            <div className="text-gray-300 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-full">
               {title}
             </div>
           )}

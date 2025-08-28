@@ -7,7 +7,7 @@ import { Particles } from "@/src/components/magicui/particles";
 const Grid = () => {
   return (
     <section>
-      <BentoGrid className="w-full  pb-20 pt-4 px-3">
+      <BentoGrid className="w-full  pb-20  px-3">
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}

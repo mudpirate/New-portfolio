@@ -29,7 +29,7 @@ const RecentProjects = () => {
                 alt="cover"
                 width={500}
                 height={300}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
 

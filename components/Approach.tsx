@@ -8,7 +8,7 @@ const Approach = () => {
   return (
     <section className="w-full relative px-3 py-15 ">
       <h1 className="heading">
-        How <span className="text-purple">I build things</span>
+        That's How <span className="text-purple">I build things</span>
       </h1>
       <h1 className=" mt-3 flex items-center justify-center gap-2">
         <span className="bg-purple/20 px-3 py-2 rounded-lg">click/hover</span>

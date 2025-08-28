@@ -12,7 +12,7 @@ const RecentProjects = () => {
       className="py-10 relative flex flex-col justify-center gap-10 items-center"
       id="projects"
     >
-      <h1 className="heading text-white mb-20 ">
+      <h1 className="heading text-white mb-5 ">
         Few of my <span className="text-purple">Innovative Projects</span>
       </h1>
 

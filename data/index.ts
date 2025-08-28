@@ -22,19 +22,6 @@ export const navItems = [
 
 export const gridItems = [
   {
-    id: 1,
-    title:
-      "I craft scalable apps with Next.js, React, TypeScript, Express, Tailwind CSS, and React Native. blending problem-solving with clean UI/UX.",
-    description: "",
-    className:
-      "lg:col-span-3 md:col-span-6 md:row-span-4  lg:min-h-[60vh]  bg-gray/50   ",
-    imgClassName: "w-full h-full object-cover object-top  ",
-
-    titleClassName: " h-full ",
-    img: "/app.png",
-    spareImg: "",
-  },
-  {
     id: 2,
     title: "Adapting Across Time Zones for Smooth Communication",
     description: "",

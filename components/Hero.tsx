@@ -6,6 +6,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import GridGlobe from "./ui/GridGlobe";
 import { Particles } from "@/src/components/magicui/particles";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -35,12 +36,39 @@ const Hero = () => {
             words="Building apps that look great and work even better."
             className="text-center text-[32px] sm:text-[36px] md:text-5xl lg:text-6xl"
           />
+          <motion.h1
+            className="text-center mt-4 mb-4 text-gray-300 font-bold md:text-lg lg:text-2xl"
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.6 } }, // slower stagger, fewer animations
+            }}
+          >
+            {[
+              `Hey I'm Nomesh,
+              I build web applications
+              using Next.js, React.js,
+              Express.js and more.`,
+            ].map((phrase, i) => (
+              <motion.span
+                key={i}
+                className="" // keeps each phrase stacked
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 3, ease: "easeOut" },
+                  },
+                }}
+              >
+                {phrase}
+              </motion.span>
+            ))}
+          </motion.h1>
 
-          <TextGenerateEffect
-            words="Hey I'm Nomesh , a Full-Stack Developer."
-            className="text-center md:tracking-wider mb-4 text-white text-sm sm:text-base md:text-lg lg:text-2xl"
-          />
-          <div className="flex gap-6 ">
+          <div className="flex gap-6 mt-8 ">
             <a href="#testimonials">
               <MagicButton title="Explore More" position="right" />
             </a>

@@ -131,7 +131,7 @@ export const BentoGridItem = ({
 
           {/* Title */}
           {title && (
-            <div className="text-gray-300 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-full">
+            <div className="text-neutral-400 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-full">
               {title}
             </div>
           )}

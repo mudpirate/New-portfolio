@@ -1,75 +1,78 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import Link from "next/link";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20 " id="projects">
-      <h1 className="heading text-white ">
+    <div
+      className="py-10 flex flex-col justify-center items-center"
+      id="projects"
+    >
+      <h1 className="heading text-white mb-20 ">
         Few of my <span className="text-purple">Innovative Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center  justify-center px-4 py-20 gap-16 ">
+
+      <div className="flex flex-wrap  md:mt-10 justify-center gap-10 px-4 py-13">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] mt-9 flex items-center  justify-center sm:w-96 w-[80vw]"
             key={item.id}
+            className="w-[80vw] sm:w-96 flex flex-col justify-between rounded-xl lg:min-h-[32rem] min-h-[28rem]"
           >
-            <PinContainer title="Made with ❤️ by Nomesh Singh">
-              <div className="relative flex items-center justify-center sm:w-96 w-80 overflow-hidden h-[26vh] lg:h-[30vh] mb-10">
-                <img
+            <PinContainer
+              title="Made with ❤️ by Nomesh Singh"
+              className="h-full flex flex-col"
+            >
+              {/* Image */}
+              <div className="w-full h-48 lg:h-60 overflow-hidden rounded-t-xl">
+                <Image
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute w-80 sm:w-full  h-[30vh] object-cover object-top bottom-0"
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl px-4 text-base line-clamp-1">
+              {/* Title */}
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 px-4 mt-4">
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal px-4 font-light text-sm line-clamp-5"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              {/* Description */}
+              <p className="lg:text-lg text-sm font-light line-clamp-4 px-4 mt-2 text-[#BEC1DD]">
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center px-4">
+              {/* Footer */}
+              <div className="flex items-center justify-between px-4 mt-auto mb-3 pt-6">
+                {/* Icons */}
+                <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center -ml-2"
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <img src={icon} alt="icon" className="p-2" />
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-center gap-4 items-center px-4 mt-2 sm:mt-0">
+
+                {/* Links */}
+                <div className="flex gap-4 items-center">
                   <Link href={item.git} target="_blank">
                     <div className="flex items-center gap-1">
-                      <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg">
-                        Github
-                      </p>
+                      <p className="text-white text-sm lg:text-base">Github</p>
                       <FaLocationArrow color="#CBACF9" />
                     </div>
                   </Link>
 
                   <Link href={item.link} target="_blank">
                     <div className="flex items-center gap-1">
-                      <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg">
-                        Live
-                      </p>
+                      <p className="text-white text-sm lg:text-base">Live</p>
                       <FaLocationArrow color="#CBACF9" />
                     </div>
                   </Link>

@@ -25,8 +25,8 @@ const Clients = () => {
           />
         </div>
 
-        <div className=" mt-12 flex  px-3 py-3 flex-wrap items-center justify-center w-full max-w-5xl ">
-          <h2 className="text-xl md:text-3xl font-medium text-white max-w-4xl">
+        <div className=" mt-12 flex   py-3 flex-wrap items-center justify-center w-full max-w-5xl ">
+          <h2 className="text-xl md:text-3xl font-medium text-white mx-auto max-w-4xl">
             I craft scalable apps with Next.js, React, TypeScript, Express,
             Tailwind CSS, and React Native. {""}
             <span className="text-purple ">

@@ -11,26 +11,10 @@ const Hero = () => {
     <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center">
       {/* Spotlights */}
       <div className="absolute inset-0 overflow-hidden">
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen max-w-full"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-0 left-[80%] max-sm:left-[50%] max-w-full"
-          fill="white"
-        />
-        <Spotlight
-          className="left-80 top-28 h-[80vh] w-[50vw] max-w-full"
-          fill="white"
-        />
-        <Spotlight
-          className="left-full top-[100px] h-[80vh] w-[50vw] max-w-full"
-          fill="white"
-        />
-        <Spotlight
-          className="inset-0 h-[80vh] w-[50vw] max-w-full"
-          fill="white"
-        />
+        <Spotlight className="top-10 left-10 opacity-70 animate-spotlight-slow" />
+        <Spotlight className="top-1/2 -left-20  opacity-70 animate-spotlight-slow" />
+        <Spotlight className="bottom-10 right-10  opacity-70 animate-spotlight-slow" />
+        <Spotlight className="bottom-20 left-1/2  opacity-70 animate-spotlight-slow" />
       </div>
 
       {/* Grid background */}

@@ -48,7 +48,7 @@ const RecentProjects = () => {
               </p>
 
               {/* Footer */}
-              <div className="flex items-center justify-between px-4 mt-auto mb-3 pt-6">
+              <div className="flex items-center justify-between px-4 mt-auto gap-5 mb-3 pt-6">
                 {/* Icons */}
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
@@ -62,7 +62,7 @@ const RecentProjects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-2 items-center">
                   <Link href={item.git} target="_blank">
                     <div className="flex items-center gap-1">
                       <p className="text-white text-sm lg:text-base">Github</p>

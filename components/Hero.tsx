@@ -37,8 +37,8 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
             className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-xl"
           >
-            Hey I'm Nomesh, I build web applications using Next.js, React.js,
-            Express.js and more.
+            Hey, I build web applications using Next.js, React.js, Express.js
+            and more.
           </motion.h1>
 
           <div className="flex gap-6 mt-8 ">

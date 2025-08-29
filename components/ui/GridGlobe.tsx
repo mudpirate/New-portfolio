@@ -415,7 +415,7 @@ const GridGlobe = () => {
         }}
         className="div"
       >
-        <h2 className="text-center text-2xl md:text-4xl font-bold pt-4 text-neutral-300 ">
+        <h2 className="text-center text-2xl md:text-2xl  font-semibold pt-4 text-neutral-300 ">
           Available for Freelance Projects across the Globe.
         </h2>
       </motion.div>

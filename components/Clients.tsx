@@ -8,7 +8,7 @@ import { Particles } from "@/src/components/magicui/particles";
 
 const Clients = () => {
   return (
-    <section id="testimonials" className="py-4 px-4 md:mt-4 md:py-20 ">
+    <section id="testimonials" className="py-4 mt-10 px-4   ">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
         I create magic
         <span className="text-purple"> with these tools</span>

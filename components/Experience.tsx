@@ -7,7 +7,7 @@ import { Particles } from "@/src/components/magicui/particles";
 
 const Experience = () => {
   return (
-    <div className="py-20 relative px-3 w-full">
+    <div className="py-4  mt-10 px-4 w-full">
       <h1 className="heading text-white">
         My <span className="text-purple">Tech Domains</span>
       </h1>

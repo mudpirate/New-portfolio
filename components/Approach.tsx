@@ -6,15 +6,13 @@ import { Particles } from "@/src/components/magicui/particles";
 
 const Approach = () => {
   return (
-    <section className="w-full relative px-3 py-15 ">
-      <h1 className="heading">
+    <section className="w-full py-4  mt-10 px-4 ">
+      <h1 className="heading ">
         How <span className="text-purple">I build things</span>
       </h1>
-      <h1 className=" mt-3 flex items-center justify-center gap-2">
-        <span className="bg-purple/20 px-3 py-2 rounded-lg">click/hover</span>
-      </h1>
+
       {/* remove bg-white dark:bg-black */}
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+      <div className=" flex flex-col lg:flex-row items-center justify-center w-full mt-10 gap-4">
         {/* add des prop */}
         <Card
           title="Planning & Strategy"

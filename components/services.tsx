@@ -208,7 +208,7 @@ const features = [
 
 const Services = () => {
   return (
-    <div id="about" className="  w-full py-4 px-4 mt-10 ">
+    <div id="about" className="  w-full py-4  mt-10 px-4  ">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-11 text-white text-center">
         About
         <span className="text-purple"> Me</span>

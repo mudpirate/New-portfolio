@@ -9,14 +9,14 @@ import { Particles } from "@/src/components/magicui/particles";
 const RecentProjects = () => {
   return (
     <div
-      className="py-10 relative flex flex-col justify-center gap-10 items-center"
+      className="py-4  mt-10 px-4  flex flex-col justify-center gap-10 items-center"
       id="projects"
     >
       <h1 className="heading text-white mb-6 ">
         Few of my <span className="text-purple">Innovative Projects</span>
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {projects.map((item) => (
           <div
             key={item.id}

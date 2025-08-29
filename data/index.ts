@@ -27,7 +27,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3  md:row-span-4 bg-black ",
     imgClassName: " ",
-    titleClassName: "justify-start   ",
+    titleClassName: "justify-start text-sm  ",
     img: "",
     spareImg: "",
   },

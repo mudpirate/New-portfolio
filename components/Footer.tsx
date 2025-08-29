@@ -9,7 +9,7 @@ import { Particles } from "@/src/components/magicui/particles";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative pt-20 pb-10" id="contact">
+    <footer className="w-full py-4  mt-10 px-4" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img

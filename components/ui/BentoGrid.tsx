@@ -119,7 +119,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "relative flex flex-col min-h-[12rem] sm:min-h-[14rem] md:min-h-[16rem] lg:min-h-[18rem] px-4 sm:px-6 md:px-8 lg:px-10 py-4"
+            "relative flex flex-col  min-h-[12rem] sm:min-h-[14rem] md:min-h-[16rem] lg:min-h-[18rem] px-4 sm:px-6 md:px-8 lg:px-10 py-4"
           )}
         >
           {/* Description */}
@@ -131,7 +131,7 @@ export const BentoGridItem = ({
 
           {/* Title */}
           {title && (
-            <div className="text-neutral-300/90 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-full">
+            <div className="text-neutral-300/90 font-bold text-2xl  max-w-full">
               {title}
             </div>
           )}

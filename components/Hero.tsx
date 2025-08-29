@@ -39,7 +39,7 @@ const Hero = () => {
           >
             Hey, I build web applications using Next.js, React.js, Express.js
             and more.
-          </motion.h1>
+          </motion.h1>  
 
           <div className="flex gap-6 mt-8 ">
             <a href="#testimonials">

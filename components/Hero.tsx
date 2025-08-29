@@ -10,28 +10,6 @@ import { Particles } from "@/src/components/magicui/particles";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const text =
-    "Hey I'm Nomesh, I build web applications using Next.js, React.js, Express.js and more.";
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    let lastTime = 0;
-    const speed = 100; // ms per letter
-
-    const step = (time: any) => {
-      if (time - lastTime > speed) {
-        setDisplayedText(text.slice(0, index));
-        index++;
-        lastTime = time;
-      }
-      if (index <= text.length) {
-        requestAnimationFrame(step);
-      }
-    };
-
-    requestAnimationFrame(step);
-  }, []);
   return (
     <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center">
       {/* Spotlights */}
@@ -53,8 +31,14 @@ const Hero = () => {
             words="Building apps that look great and work even better."
             className="text-center text-[32px] sm:text-[36px] md:text-5xl "
           />
-          <motion.h1 className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-xl">
-            {displayedText}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }} // start hidden + slightly down
+            animate={{ opacity: 1, y: 0 }} // end visible + normal position
+            transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+            className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-xl"
+          >
+            Hey I'm Nomesh, I build web applications using Next.js, React.js,
+            Express.js and more.
           </motion.h1>
 
           <div className="flex gap-6 mt-8 ">

@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -9,6 +10,28 @@ import { Particles } from "@/src/components/magicui/particles";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const text =
+    "Hey I'm Nomesh, I build web applications using Next.js, React.js, Express.js and more.";
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    let lastTime = 0;
+    const speed = 100; // ms per letter
+
+    const step = (time: any) => {
+      if (time - lastTime > speed) {
+        setDisplayedText(text.slice(0, index));
+        index++;
+        lastTime = time;
+      }
+      if (index <= text.length) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, []);
   return (
     <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center">
       {/* Spotlights */}
@@ -30,36 +53,8 @@ const Hero = () => {
             words="Building apps that look great and work even better."
             className="text-center text-[32px] sm:text-[36px] md:text-5xl "
           />
-          <motion.h1
-            className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-xl"
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.6 } }, // slower stagger, fewer animations
-            }}
-          >
-            {[
-              `Hey I'm Nomesh,
-              I build web applications
-              using Next.js, React.js,
-              Express.js and more.`,
-            ].map((phrase, i) => (
-              <motion.span
-                key={i}
-                className="" // keeps each phrase stacked
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  show: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 2, ease: "easeOut" },
-                  },
-                }}
-              >
-                {phrase}
-              </motion.span>
-            ))}
+          <motion.h1 className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-xl">
+            {displayedText}
           </motion.h1>
 
           <div className="flex gap-6 mt-8 ">

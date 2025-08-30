@@ -15,11 +15,11 @@ const Hero = () => {
       {/* Spotlights */}
 
       {/* Grid background */}
-      <div className="h-[100vh] w-full  dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
+      <div className="h-[100vh] w-full bg-black dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
         <div
-          className="absolute inset-0 h-[100vh] flex items-center justify-center dark:bg-black-100
+          className="absolute inset-0 h-[100vh] flex  items-center justify-center dark:bg-black-100
          
-          bg-gradient-to-b from-black/90 via-black/80 to-purple/40"
+          bg-gradient-to-b from-black/90 via-black/80 to-purple/50"
         />
       </div>
 
@@ -39,7 +39,7 @@ const Hero = () => {
           >
             Hey, I build web applications using Next.js, React.js, Express.js
             and more.
-          </motion.h1>  
+          </motion.h1>
 
           <div className="flex gap-6 mt-8 ">
             <a href="#testimonials">

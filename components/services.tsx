@@ -158,9 +158,9 @@ const features = [
   },
 
   {
-    name: "Converting",
+    name: "Generative AI",
     description:
-      "Converting design files (Figma, XD, Sketch, and PSD) into pixel-perfect.",
+      "Using the power of AI to create, optimize, and enhance digital solutions, from text to images and more.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",

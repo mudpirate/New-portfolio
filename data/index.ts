@@ -75,7 +75,7 @@ export const projects = [
     iconLists: [
       "/re.svg",
       "/tail.svg",
-      "/javascript.svg",
+      "/Javascript.svg",
       "/c.svg",
       "/google.png",
     ],
@@ -89,7 +89,7 @@ export const projects = [
     iconLists: [
       "/re.svg",
       "/tail.svg",
-      "/javascript.svg",
+      "/Javascript.svg",
       "/three.svg",
       "/jwt.png",
     ],
@@ -102,7 +102,7 @@ export const projects = [
     des: " A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.",
     img: "/image1.webp",
     git: "https://github.com/mudpirate/e-commerce",
-    iconLists: ["/re.svg", "/tail.svg", "/javascript.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/Javascript.svg"],
     link: "https://e-commerce-one-lyart-97.vercel.app",
   },
 ];

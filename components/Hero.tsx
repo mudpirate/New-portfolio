@@ -11,15 +11,14 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center">
+    <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center ">
       {/* Spotlights */}
 
       {/* Grid background */}
-      <div className="h-[100vh] w-full bg-black dark:bg-black-100 dark:bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center pointer-events-none">
+      <div className="h-[100vh] w-full bg-black dark:bg-black absolute top-0 left-0 flex items-center justify-center pointer-events-none !bg-none">
         <div
-          className="absolute inset-0 h-[100vh] flex  items-center justify-center dark:bg-black-100
-         
-          bg-gradient-to-b from-black/90 via-black/80 to-purple/50"
+          className="absolute inset-0 h-[100vh] flex items-center justify-center 
+      bg-gradient-to-b from-black/90 via-black/80 to-purple/50"
         />
       </div>
 

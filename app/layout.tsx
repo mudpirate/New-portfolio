@@ -8,15 +8,19 @@ const inter = Inter({ subsets: ["latin"] });
 
 // app/layout.tsx
 export const metadata: Metadata = {
-  title: "Nomesh Singh Portfolio",
+  title: "Nomesh Singh ",
   description:
     "Full Stack Developer | Building real life & AI-powered projects.",
+  icons: {
+    icon: "/rr.jpeg", // path inside public/
+  },
   openGraph: {
     title: "Nomesh Singh Portfolio",
     description:
       "Full Stack Developer | Building real life & AI-powered projects.",
     url: "https://nomeshportfoliowebsite.vercel.app",
     type: "website",
+
     images: [
       {
         url: "https://nomeshportfoliowebsite.vercel.app/11.PNG",

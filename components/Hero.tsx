@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
       <div
         style={{ width: "100%", height: "100%" }}
-        className="absolute inset-0"
+        className="absolute inset-0 hidden lg:block"
       >
         <LiquidEther
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}

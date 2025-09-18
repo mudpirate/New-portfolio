@@ -8,6 +8,7 @@ import { BentoCard, BentoGrid } from "@/src/components/magicui/bento-grid";
 import { Marquee } from "@/src/components/magicui/marquee";
 import { Particles } from "@/src/components/magicui/particles";
 import GridGlobe from "./ui/GridGlobe";
+import ProfileCard from "./ProfileCard";
 
 interface Item {
   name: string;
@@ -218,6 +219,8 @@ const Services = () => {
           <BentoCard key={idx} {...feature} />
         ))}
       </BentoGrid>
+      <div className="w-full h-full flex justify-center items-center"></div>
+
       <GridGlobe />
     </div>
   );

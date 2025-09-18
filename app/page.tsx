@@ -37,12 +37,6 @@ const Home = () => {
         <Approach />
         <Experience />
         <Footer />
-        <Particles
-          className="absolute hidden md:block inset-0 z-0"
-          quantity={150}
-          ease={80}
-          refresh
-        />
       </div>
     </main>
   );

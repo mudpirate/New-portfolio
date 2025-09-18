@@ -9,6 +9,8 @@ import { Marquee } from "@/src/components/magicui/marquee";
 import { Particles } from "@/src/components/magicui/particles";
 import GridGlobe from "./ui/GridGlobe";
 import ProfileCard from "./ProfileCard";
+import TrueFocus from "./TrueFocus";
+import MagicBento from "./MagicBento";
 
 interface Item {
   name: string;
@@ -210,17 +212,23 @@ const features = [
 const Services = () => {
   return (
     <div id="about" className="  w-full py-4  mt-10 px-4  ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-11 text-white text-center">
-        About
-        <span className="text-purple"> Me</span>
-      </h1>
+      <div className="flex justify-center items-center mb-4">
+        <TrueFocus
+          sentence="About Me"
+          manualMode={false}
+          blurAmount={4}
+          borderColor="purple"
+          animationDuration={1}
+          pauseBetweenAnimations={1}
+        />
+      </div>
+
       <BentoGrid>
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
         ))}
       </BentoGrid>
       <div className="w-full h-full flex justify-center items-center"></div>
-
       <GridGlobe />
     </div>
   );

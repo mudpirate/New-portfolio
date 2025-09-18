@@ -5,14 +5,19 @@ import React from "react";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import { Particles } from "@/src/components/magicui/particles";
+import TrueFocus from "./TrueFocus";
 
 const Clients = () => {
   return (
     <section id="testimonials" className="py-4 mt-10 px-4   ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
-        I create magic
-        <span className="text-purple"> with these tools</span>
-      </h1>
+      <TrueFocus
+        sentence="I create magic with these tools"
+        manualMode={false}
+        blurAmount={3}
+        borderColor="purple"
+        animationDuration={1}
+        pauseBetweenAnimations={1}
+      />
 
       <div className="flex flex-col  mt-10  items-center">
         <div className="w-full  max-w-screen h-[15rem] sm:h-[20rem] rounded-md relative overflow-hidden">

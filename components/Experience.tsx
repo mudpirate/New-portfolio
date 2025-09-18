@@ -4,13 +4,20 @@ import React from "react";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { Particles } from "@/src/components/magicui/particles";
+import TrueFocus from "./TrueFocus";
+import ScrollStack, { ScrollStackItem } from "./ScrollStack";
 
 const Experience = () => {
   return (
     <div className="py-4  mt-10 px-4 w-full">
-      <h1 className="heading text-white">
-        My <span className="text-purple">Tech Domains</span>
-      </h1>
+      <TrueFocus
+        sentence="My tech domains"
+        manualMode={false}
+        blurAmount={3}
+        borderColor="purple"
+        animationDuration={1}
+        pauseBetweenAnimations={1}
+      />
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (

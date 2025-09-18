@@ -6,15 +6,21 @@ import Link from "next/link";
 import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
 import { Particles } from "@/src/components/magicui/particles";
+import TrueFocus from "./TrueFocus";
 const RecentProjects = () => {
   return (
     <div
       className="py-4  mt-10 px-4  flex flex-col justify-center gap-10 items-center"
       id="projects"
     >
-      <h1 className="heading text-white mb-6 ">
-        Few of my <span className="text-purple">Innovative Projects</span>
-      </h1>
+      <TrueFocus
+        sentence="Few of my innovative projects"
+        manualMode={false}
+        blurAmount={3}
+        borderColor="purple"
+        animationDuration={1}
+        pauseBetweenAnimations={1}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {projects.map((item) => (

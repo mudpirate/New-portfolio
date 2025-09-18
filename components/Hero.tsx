@@ -29,7 +29,7 @@ const Hero = () => {
         <LiquidEther
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
           mouseForce={80}
-          cursorSize={100}
+          cursorSize={90}
           isViscous={false}
           viscous={30}
           iterationsViscous={32}
@@ -37,10 +37,10 @@ const Hero = () => {
           resolution={0.5}
           isBounce={false}
           autoDemo={true}
-          autoSpeed={0.5}
+          autoSpeed={0.3}
           autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
+          takeoverDuration={0.5}
+          autoResumeDelay={500} // 👈 only 0.5s delay
           autoRampDuration={0.6}
         />
       </div>
@@ -59,8 +59,8 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
             className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-2xl"
           >
-            Hey, I build web applications using Next.js, React.js, Express.js
-            and more.
+            Hi, I’m Nomesh. I build fast, smart, and scalable tech — from Web
+            Apps to AI Agents to Microservices.
           </motion.h1>
 
           <div className="flex gap-6 mt-8 ">

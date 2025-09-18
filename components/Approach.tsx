@@ -3,14 +3,19 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 import { Particles } from "@/src/components/magicui/particles";
+import TrueFocus from "./TrueFocus";
 
 const Approach = () => {
   return (
     <section className="w-full py-4  mt-10 px-4 ">
-      <h1 className="heading ">
-        How <span className="text-purple">I build things</span>
-      </h1>
-
+      <TrueFocus
+        sentence="How I Build things"
+        manualMode={false}
+        blurAmount={3}
+        borderColor="purple"
+        animationDuration={1}
+        pauseBetweenAnimations={1}
+      />{" "}
       {/* remove bg-white dark:bg-black */}
       <div className=" flex flex-col lg:flex-row items-center justify-center w-full mt-10 gap-4">
         {/* add des prop */}

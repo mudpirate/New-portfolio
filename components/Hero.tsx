@@ -12,16 +12,17 @@ import LiquidEther from "../components/LiquidEther";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 relative overflow-x-hidden min-h-[100vh] flex items-center justify-center ">
+    <div className="pb-20 pt-36 relative overflow-x-hidden lg:bg-black min-h-[100vh] flex items-center justify-center ">
       {/* Spotlights */}
 
       {/* Grid background */}
-      <div className="h-[100vh] w-full bg-black dark:bg-black absolute top-0 left-0 flex items-center justify-center pointer-events-none !bg-none">
-        <div
-          className="absolute inset-0 h-[100vh] flex items-center justify-center 
-      "
-        />
-      </div>
+
+      <div
+        className="absolute inset-0 h-[100vh]  flex items-center justify-center dark:bg-black-100
+         
+          bg-gradient-to-b from-black/90 via-black/80 to-purple/10"
+      />
+
       <div
         style={{ width: "100%", height: "100%" }}
         className="absolute inset-0 hidden lg:block"

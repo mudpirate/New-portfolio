@@ -216,8 +216,8 @@ const Services = () => {
         <TrueFocus
           sentence="About Me"
           manualMode={false}
-          blurAmount={4}
-          borderColor="purple"
+          blurAmount={3}
+          borderColor="blue"
           animationDuration={1}
           pauseBetweenAnimations={1}
         />

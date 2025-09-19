@@ -17,7 +17,7 @@ const RecentProjects = () => {
         sentence="Few of my innovative projects"
         manualMode={false}
         blurAmount={3}
-        borderColor="purple"
+        borderColor="blue"
         animationDuration={1}
         pauseBetweenAnimations={1}
       />

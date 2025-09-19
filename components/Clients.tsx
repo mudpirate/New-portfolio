@@ -14,7 +14,7 @@ const Clients = () => {
         sentence="I create magic with these tools"
         manualMode={false}
         blurAmount={3}
-        borderColor="purple"
+        borderColor="blue"
         animationDuration={1}
         pauseBetweenAnimations={1}
       />

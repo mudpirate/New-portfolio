@@ -12,7 +12,7 @@ const Approach = () => {
         sentence="How I Build things"
         manualMode={false}
         blurAmount={3}
-        borderColor="purple"
+        borderColor="blue"
         animationDuration={1}
         pauseBetweenAnimations={1}
       />{" "}

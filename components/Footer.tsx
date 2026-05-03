@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/28 text-xs tracking-tight">
-          Delhi, <DelhiClock />
+          Kolkata, <DelhiClock />
         </p>
       </div>
     </footer>

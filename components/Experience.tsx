@@ -8,7 +8,7 @@ const jobs = [
     id: 1,
     company: "Omnia",
     icon: "⚙",
-    role: "Full Stack AI Intern",
+    role: "Full Stack AI Intern (Kuwait)",
     type: "Remote",
     dates: "December - May 2026",
     defaultOpen: false,

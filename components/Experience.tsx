@@ -1,57 +1,133 @@
 "use client";
-import React from "react";
 
-import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
-import { Particles } from "@/src/components/magicui/particles";
-import TrueFocus from "./TrueFocus";
-import ScrollStack, { ScrollStackItem } from "./ScrollStack";
+import { useState } from "react";
+import { ChevronUp, ChevronDown, Calendar } from "lucide-react";
+
+const jobs = [
+  {
+    id: 1,
+    company: "Omnia",
+    icon: "⚙",
+    role: "Full Stack AI Intern",
+    type: "Remote",
+    dates: "December - May 2026",
+    defaultOpen: true,
+    bullets: [
+      "Developed an internal financial management system to track income, manage expenses, and provide analytics with multi-currency support.",
+      "Designed and built a modern hackathon website with an AI-first UI and seamless registration flow.",
+      "Built 15+ responsive dashboards with light/dark mode for a scalable UI library across multiple domains.",
+      "Led UI library development by fixing bugs, adding features, and reviewing PRs to ensure code quality and scalability.",
+      "Tech Stack: React.js, Next.js, Tailwind CSS, TypeScript, Supabase, Motion",
+    ],
+  },
+  {
+    id: 2,
+    company: "Freelancer",
+    icon: "✦",
+    role: "Frontend and React Native Developer",
+    type: "Remote",
+    dates: "September - November 2025",
+    defaultOpen: false,
+    bullets: [
+      "Built and maintained responsive UI components for the platform's public-facing web application.",
+      "Collaborated with designers to translate Figma mockups into pixel-perfect React components.",
+      "Improved page load performance by optimising asset delivery and reducing bundle size.",
+      "Tech Stack: React.js, Tailwind CSS, JavaScript, REST APIs",
+    ],
+  },
+];
 
 const Experience = () => {
-  return (
-    <div className="py-4  mt-10 px-4 w-full">
-      <TrueFocus
-        sentence="My tech domains"
-        manualMode={false}
-        blurAmount={3}
-        borderColor="blue"
-        animationDuration={1}
-        pauseBetweenAnimations={1}
-      />
+  const [openIds, setOpenIds] = useState<Set<number>>(
+    new Set(jobs.filter((j) => j.defaultOpen).map((j) => j.id))
+  );
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              // add this border radius to make it more rounded so that the moving border is more realistic
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 bg-black dark:border-slate-800"
-          >
-            <div className="flex  items-center justify-center py-12 px-8 md:px-4 ">
-              <div className="lg:ms-5">
-                <h1 className="text-start text-white text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
-              </div>
-            </div>
-          </Button>
-        ))}
+  const toggle = (id: number) => {
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
+
+  return (
+    <section id="about" className="px-5 sm:px-8 py-8 border-t border-dashed border-white/35">
+      {/* Geist Mono section label */}
+      <div className="inline-block border border-dashed border-white/35 px-2  py-2 mb-6">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400]  text-white/80 text-xs sm:text-sm tracking-tight">
+          Places I&apos;ve Made an Impact
+        </span>
       </div>
-    </div>
+
+      <div className="flex flex-col gap-2.5">
+        {jobs.map((job) => {
+          const isOpen = openIds.has(job.id);
+          return (
+            <div key={job.id} className="border border-dashed border-white/35">
+              <button
+                onClick={() => toggle(job.id)}
+                className="w-full text-left px-5 sm:px-6 pt-4 pb-3 flex items-start justify-between gap-4 group"
+              >
+                <div className="flex flex-col gap-1.5 min-w-0">
+                  {/* Instrument Serif company name */}
+                  <div className="flex items-center gap-2">
+                    <span className="font-[family-name:var(--font-instrument-serif)] text-xl sm:text-2xl text-white leading-tight">
+                      {job.company}
+                    </span>
+                    
+                  </div>
+
+                  {/* Geist Mono for role / badge / date */}
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400]  text-white/50 text-xs tracking-tight">
+                      {job.role}
+                    </span>
+                    <span className="font-[family-name:var(--font-geist-mono)] text-xs px-1.5 py-0.5 border border-white/20 text-white/40 tracking-tight">
+                      {job.type}
+                    </span>
+                    <span className="flex items-center gap-1 font-[family-name:var(--font-geist-mono)] text-white/35 text-xs ml-auto tracking-tight">
+                      <Calendar size={10} />
+                      {job.dates}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-1 text-white/30 group-hover:text-white/60 transition-colors flex-shrink-0">
+                  {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                </div>
+              </button>
+
+              {isOpen && (
+                <ul className="px-5 sm:px-6 pb-5 flex flex-col gap-2">
+                  {job.bullets.map((bullet, i) => {
+                    const isTechStack = bullet.startsWith("Tech Stack:");
+                    return (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/20 flex-shrink-0" />
+                        {isTechStack ? (
+                          <span className="text-sm leading-relaxed">
+                            <span className="font-[family-name:var(--font-geist-mono)] text-white/35 text-xs">
+                              Tech Stack:{" "}
+                            </span>
+                            <span className="font-[family-name:var(--font-geist-mono)] text-white/65 text-xs font-medium">
+                              {bullet.replace("Tech Stack: ", "")}
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="text-sm text-white/60 leading-relaxed">
+                            {bullet}
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

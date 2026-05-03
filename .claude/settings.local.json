@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir C:\\\\Users\\\\nomes\\\\New-portfolio\\\\public *)",
+      "Bash(curl -s http://localhost:3001)"
+    ]
+  }
+}

@@ -75,6 +75,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans);
+    font-weight: 140;
 
     /* ✨ Add global grid background */
     background-image: linear-gradient(

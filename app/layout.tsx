@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+  weight: "400",
+  adjustFontFallback: false,
+});
 
-// app/layout.tsx
 export const metadata: Metadata = {
-  title: "Nomesh Singh ",
-  description:
-    "Full Stack Developer | Building real life & AI-powered projects.",
-  icons: {
-    icon: "/rr.jpeg", // path inside public/
-  },
+  title: "Nomesh Singh",
+  description: "Full Stack Developer | Building real life & AI-powered projects.",
+  icons: { icon: "/rr.jpeg" },
   openGraph: {
     title: "Nomesh Singh Portfolio",
-    description:
-      "Full Stack Developer | Building real life & AI-powered projects.",
+    description: "Full Stack Developer | Building real life & AI-powered projects.",
     url: "https://nomeshportfoliowebsite.vercel.app",
     type: "website",
-
     images: [
       {
         url: "https://nomeshportfoliowebsite.vercel.app/11.PNG",
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/r.jpg" sizes="any" />
+        <link rel="icon" href="/rr.jpeg" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable} ${GeistSans.className}`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

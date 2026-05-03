@@ -1,80 +1,86 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-import { useEffect, useState } from "react";
-import MagicButton from "./MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import GridGlobe from "./ui/GridGlobe";
-import { Particles } from "@/src/components/magicui/particles";
-import { motion } from "framer-motion";
-import LiquidEther from "../components/LiquidEther";
+const BadgeLink = ({
+  href,
+  children,
+  icon,
+}: {
+  href: string;
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-1 px-2 py-0.5 border border-white/25 text-white/75 hover:border-white/50 hover:text-white transition-all duration-200 rounded-sm font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs tracking-tight"
+  >
+    {icon && <span>{icon}</span>}
+    {children}
+  </a>
+);
+
+const Tag = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center px-2 py-0.5 border border-white/20 text-white/65 hover:border-white/45 hover:text-white/95 transition-all duration-200 rounded-sm font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs tracking-tight"
+  >
+    {children}
+  </a>
+);
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 relative overflow-x-hidden lg:bg-black min-h-[100vh] flex items-center justify-center ">
-      {/* Spotlights */}
+    <section className="px-5 sm:px-8 pt-10 pb-8">
+      {/* Instrument Serif heading */}
+      <h1 className="font-[family-name:var(--font-instrument-serif)] text-3xl sm:text-4xl md:text-6xl text-white tracking-tight mb-3 leading-tight">
+        Hi, I&apos;m Nomesh
+      </h1>
 
-      {/* Grid background */}
+      {/* Geist Mono for roles */}
+      <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/40 text-xs sm:text-md tracking-widest mb-7">
+        Frontend&nbsp;•&nbsp;Backend&nbsp;•&nbsp;Devops&nbsp;•&nbsp;AI Agents&nbsp;•&nbsp;Automation&nbsp;
+      </p>
 
-      <div
-        className="absolute inset-0 h-[100vh]  flex items-center justify-center dark:bg-black-100
-         
-          bg-gradient-to-b from-black/90 via-black/80 to-purple/10"
-      />
+      {/* Geist weight 139 — ultra-light body text */}
+      <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed tracking-tight mb-5">
+        They call me{" "}
+        <span className="text-white [font-weight:300]">Static</span>. Sounds like noise, until you see the signal. I architect high-frequency interfaces, bridge the gap between data and design, and scale systems while the world is still sleeping.
+      </p>
 
-      <div
-        style={{ width: "100%", height: "100%" }}
-        className="absolute inset-0 hidden lg:block"
-      >
-        <LiquidEther
-          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-          mouseForce={80}
-          cursorSize={90}
-          isViscous={false}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo={true}
-          autoSpeed={0.3}
-          autoIntensity={2.2}
-          takeoverDuration={0.5}
-          autoResumeDelay={500} // 👈 only 0.5s delay
-          autoRampDuration={0.6}
-        />
-      </div>
+      <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed mb-2 flex flex-wrap items-center gap-1.5">
+        Available for freelance or full-time roles. Slide into my{" "}
+        <BadgeLink href="https://x.com/nomeshSingh_XD" icon="𝕏">
+          DMs
+        </BadgeLink>{" "}
+        or{" "}
+        <BadgeLink href="mailto:nomeshsingh33@gmail.com" icon="✉">
+          Email
+        </BadgeLink>{" "}
+        me.
+      </p>
 
-      {/* Content */}
-
-      <div className="flex justify-center  relative z-10">
-        <div className="w-full px-4 max-w-[89vw] h-full md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <TextGenerateEffect
-            words="Building apps that look great and work even better."
-            className="text-center text-[32px] sm:text-[36px] md:text-6xl "
-          />
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }} // start hidden + slightly down
-            animate={{ opacity: 1, y: 0 }} // end visible + normal position
-            transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
-            className="text-center mt-4 mb-4 text-gray-200 font-bold md:text-lg lg:text-2xl"
-          >
-            Hi, I’m Nomesh. I build fast, smart, and scalable tech — from Web
-            Apps to AI Agents to Microservices.
-          </motion.h1>
-
-          <div className="flex gap-6 mt-8 ">
-            <a href="#testimonials">
-              <MagicButton title="Explore More" position="right" />
-            </a>
-            <a href="/resume.pdf" download>
-              <MagicButton title="Download Resume" position="right" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed flex flex-wrap items-center gap-1.5">
+        <Tag href="https://github.com/mudpirate" >GitHub</Tag>
+        <span className="text-white/90">,</span>
+        <Tag href="https://www.linkedin.com/in/nomesh-singh-121510328/">
+          LinkedIn
+        </Tag>
+        <span className="text-white/90">,</span>
+        <Tag href="/resume.pdf">Resume</Tag>{" "}
+        <span className="text-white/60">
+          ? Yep, they&apos;re all unlocked if you&apos;re curious.
+        </span>
+      </p>
+    </section>
   );
 };
 

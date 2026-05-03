@@ -1,53 +1,45 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
-import { socialMedia } from "@/data";
-import MagicButton from "./MagicButton";
-import Link from "next/link";
-import { Particles } from "@/src/components/magicui/particles";
+const DelhiClock = () => {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const tick = () => {
+      setTime(
+        new Date().toLocaleTimeString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
+        })
+      );
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return <span>{time}</span>;
+};
 
 const Footer = () => {
   return (
-    <footer className="w-full py-4  mt-10 px-4" id="contact">
-      {/* background grid */}
-
-      <div className="flex flex-col items-center">
-        <h1 className="heading text-white lg:max-w-[45vw]">
-          Connect with <span className="text-purple">me</span>
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can be asset to
-          your team.
-        </p>
-
-        <div className="flex justify-center items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <Link
-              href={info.link}
-              key={info.id}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                key={info.id}
-                className="w-100 h-100 cursor-pointer gap-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75  rounded-lg "
-              >
-                <img src={info.img} alt="icons" width={70} height={70} />
-              </div>
-            </Link>
-          ))}
+    <footer className="px-5 sm:px-8 mt-auto">
+      <div className="border-t border-dashed border-white/35 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <div className="flex flex-col gap-0.5">
+          <p className="text-white/50 text-sm">
+            Designed &amp; Developed by{" "}
+            <span className="text-white/80 font-semibold">Nomesh</span>
+          </p>
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/22 text-xs tracking-tight">
+            ©2026. All rights reserved.
+          </p>
         </div>
-      </div>
-      <div className="flex mt-16 md:gap-10 gap-5 flex-col md:flex-row justify-center items-center font-sans">
-        <p className="md:text-2xl text-white text-md md:font-bold font-bold">
-          Gmail - nomeshsingh33@gmail.com
-        </p>
-      </div>
 
-      <div className="flex mt-16  flex-col justify-between items-center">
-        <p className="md:text-base text-white text-sm md:font-normal font-light">
-          Made with ❤️ by Nomesh Singh
+        <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/28 text-xs tracking-tight">
+          Delhi, <DelhiClock />
         </p>
       </div>
     </footer>

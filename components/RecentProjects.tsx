@@ -1,92 +1,127 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-import { projects } from "@/data";
-import Link from "next/link";
-import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
-import { Particles } from "@/src/components/magicui/particles";
-import TrueFocus from "./TrueFocus";
-const RecentProjects = () => {
-  return (
-    <div
-      className="py-4  mt-10 px-4  flex flex-col justify-center gap-10 items-center"
-      id="projects"
-    >
-      <TrueFocus
-        sentence="Few of my innovative projects"
-        manualMode={false}
-        blurAmount={3}
-        borderColor="blue"
-        animationDuration={1}
-        pauseBetweenAnimations={1}
+import Link from "next/link";
+import { projects } from "@/data";
+
+const iconToName: Record<string, string> = {
+  "/next.svg": "Next.js",
+  "/re.svg": "React.js",
+  "/tail.svg": "Tailwind CSS",
+  "/ts.svg": "TypeScript",
+  "/MongoDB.svg": "MongoDB",
+  "/inngest.png": "Inngest",
+  "/neon.png": "Neon",
+  "/c.svg": "Clerk",
+  "/JavaScript.svg": "JavaScript",
+  "/three.svg": "Three.js",
+  "/jwt.png": "JWT",
+  "/google.png": "Google",
+  "/PostgresSQL.svg": "PostgreSQL",
+  "/MySQL.svg": "MySQL",
+};
+
+export const ProjectCard = ({
+  title,
+  des,
+  img,
+  iconLists,
+  link,
+  git,
+}: (typeof projects)[number]) => (
+  <div className="border border-dashed border-white/35 flex flex-col sm:flex-row">
+    <div className="sm:w-[40%] w-full h-44 sm:h-auto overflow-hidden bg-white/[0.02] flex-shrink-0">
+      <Image
+        src={img}
+        alt={title}
+        width={520}
+        height={340}
+        className="w-full h-full  object-top"
       />
+    </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
-        {projects.map((item) => (
-          <div
-            key={item.id}
-            className="flex flex-col border rounded-xl shadow-lg bg-[#0a0a0a] w-full h-[32rem] overflow-hidden"
-          >
-            {/* Image */}
-            <div className="w-full h-48 lg:h-60 overflow-hidden">
-              <Image
-                src={item.img}
-                alt="cover"
-                width={500}
-                height={300}
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+    <div className="flex-1 p-4 sm:p-5 flex flex-col gap-2.5 border-t sm:border-t-0 sm:border-l border-dashed border-white/35">
+      {/* Title + live/github — Instrument Serif title, Geist Mono buttons */}
+      <div className="flex items-start justify-between gap-3">
+        <h2 className="font-[family-name:var(--font-instrument-serif)] text-lg sm:text-xl text-white leading-snug">
+          {title}
+        </h2>
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs px-2 py-0.5 border border-white/20 text-white/50 hover:border-white/35 hover:text-white/90 transition-all tracking-tight"
+            >
+              Live
+            </a>
+          )}
+          {git && (
+            <a
+              href={git}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs px-2 py-0.5 border border-white/20 text-white/50 hover:border-white/35 hover:text-white/90 transition-all tracking-tight"
+            >
+              Github
+            </a>
+          )}
+        </div>
+      </div>
 
-            {/* Content */}
-            <div className="flex flex-col flex-1 p-4">
-              {/* Title */}
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
+      {/* Geist Sans description (default) */}
+      <p className="text-white/50 text-sm leading-relaxed line-clamp-3">{des}</p>
 
-              {/* Description */}
-              <p className="lg:text-lg text-sm font-light line-clamp-7  mt-2 text-[#BEC1DD]">
-                {item.des}
-              </p>
-
-              {/* Footer */}
-              <div className="flex items-center justify-between mt-auto gap-5 pt-6">
-                {/* Icons */}
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/20 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center -ml-2"
-                    >
-                      <img src={icon} alt="icon" className="p-2" />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Links */}
-                <div className="flex gap-1  mr-3 items-center">
-                  <Link href={item.git} target="_blank">
-                    <div className="flex items-center gap-1 hover:underline">
-                      <p className="text-white text-sm lg:text-base">Github</p>
-                      <FaLocationArrow color="#CBACF9" />
-                    </div>
-                  </Link>
-
-                  <Link href={item.link} target="_blank">
-                    <div className="flex items-center gap-1 hover:underline">
-                      <p className="text-white text-sm lg:text-base ">Live</p>
-                      <FaLocationArrow color="#CBACF9" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+      {/* Geist Mono for tech tags */}
+      <div className="mt-auto pt-2">
+        <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/25 text-xs mb-1.5 tracking-tight">
+          Technologies Used:
+        </p>
+        <div className="flex flex-wrap gap-1">
+          {iconLists.map((icon) => {
+            const name = iconToName[icon] ?? icon.replace(/\/|\.svg|\.png/g, "");
+            return (
+              <span
+                key={icon}
+                className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs px-1.5 py-0.5 border border-white/15 text-white/45 tracking-tight"
+              >
+                {name}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
+  </div>
+);
+
+const RecentProjects = () => {
+  const featured = projects.slice(0, 2);
+
+  return (
+    <section id="projects" className="px-5 sm:px-8 py-8 border-t border-dashed border-white/35">
+      <div className="inline-block border border-dashed border-white/35 px-4 py-2 mb-6">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/80 text-xs sm:text-sm tracking-tight">
+          Things I&apos;ve Built
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-2.5">
+        {featured.map((project, i) => (
+          <ProjectCard key={i} {...project} />
+        ))}
+      </div>
+
+      <div className="flex justify-end mt-4">
+        <Link
+          href="/projects"
+          className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs text-white/40 hover:text-white/80 transition-colors py-2 border  px-2 border-white/35 border-dashed flex items-center gap-1.5 tracking-tight"
+        >
+          View all projects →
+        </Link>
+      </div>
+    </section>
   );
 };
 

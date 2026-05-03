@@ -28,6 +28,7 @@ export const ProjectCard = ({
   iconLists,
   link,
   git,
+  inProgress,
 }: (typeof projects)[number]) => (
   <div className="border border-dashed border-white/35 flex flex-col sm:flex-row">
     <div className="sm:w-[40%] w-full h-44 sm:h-auto overflow-hidden bg-white/[0.02] flex-shrink-0">
@@ -66,6 +67,12 @@ export const ProjectCard = ({
             >
               Github
             </a>
+          )}
+          {inProgress && (
+            <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs px-2 py-0.5 border border-white/20 text-white/50 tracking-tight flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
+              In Progress
+            </span>
           )}
         </div>
       </div>

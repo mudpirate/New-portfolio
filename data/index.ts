@@ -7,6 +7,7 @@ export const projects = [
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg", "/MongoDB.svg", "/inngest.png"],
     link: "",
     git: "https://github.com/mudpirate/Thinkease-app",
+    inProgress: true,
   },
   {
     id: 2,

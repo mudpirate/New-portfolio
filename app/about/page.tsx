@@ -23,6 +23,20 @@ const techStack = [
     items: ["Docker", "AWS (EC2, ECR, ECS, CloudFront)", "CI/CD", "Nginx"],
   },
   {
+    label: "AI & GenAI",
+    items: [
+      "LangChain", "LangGraph", "Vercel AI SDK", "Gemini AI", "OpenAI",
+      "Anthropic Claude", "LlamaIndex", "Ollama", "Hugging Face", "RAG",
+    ],
+  },
+  {
+    label: "Automation & Web Scraping",
+    items: [
+      "n8n", "Inngest", "BullMQ", "Puppeteer", "Playwright",
+      "Cheerio", "Apify", "Cron Jobs", "Webhook Pipelines",
+    ],
+  },
+  {
     label: "Tools",
     items: ["VS Code", "Postman", "Figma", "GitHub"],
   },
@@ -33,7 +47,7 @@ const journey = [
     year: "2026",
     items: [
       {
-        title: "Full Stack Developer Intern @ OceanLab Technology",
+        title: "Full Stack AI Intern @Omnia",
         desc: "Working on financial tools, hackathon platforms, and a scalable UI library used across multiple domains.",
       },
       {
@@ -50,7 +64,7 @@ const journey = [
     year: "2025",
     items: [
       {
-        title: "Frontend Developer Intern @ Research Commons",
+        title: "Freelancer",
         desc: "Built responsive UI components, improved performance, and shipped pixel-perfect interfaces from Figma.",
       },
       {
@@ -80,17 +94,14 @@ const journey = [
     year: "2023",
     items: [
       {
-        title: "Started my BCA journey",
+        title: "Started my Btech journey",
         desc: "Entered college with no coding background and started from the very beginning.",
       },
       {
-        title: "Learned C, HTML, CSS, and JavaScript",
+        title: "Learned C, HTML, CSS",
         desc: "Followed the college syllabus to build a solid foundation and finish semester one strong.",
       },
-      {
-        title: "Focused on academics",
-        desc: "Everything I studied was to perform well in exams and build a strong academic base to grow from.",
-      },
+     
     ],
   },
 ];
@@ -113,7 +124,7 @@ const AboutPage = () => {
 
           {/* Bio */}
           <p className="text-white/65 text-sm sm:text-base leading-relaxed mb-10">
-            I&apos;m a full stack developer who enjoys building things that are
+            I&apos;m a full stack AI developer who enjoys building things that are
             simple, useful, and easy to use. I like writing clean code,
             designing neat interfaces, and solving real problems with tech.
             I&apos;m always exploring new tools, learning as I go, and trying

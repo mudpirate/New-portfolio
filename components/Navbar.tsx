@@ -27,14 +27,14 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-xs sm:text-sm text-white/65 px-2.5 sm:px-3 py-1 border border-white/20 hover:border-white/35 hover:text-white/95 transition-all duration-200 tracking-tight"
+              className="font-[family-name:var(--font-geist-mono)] text-xs sm:text-sm text-white/65 px-2.5 sm:px-3 py-1 border border-white/30 border-dashed hover:border-white/50 hover:text-white/95 transition-all duration-200 tracking-tight"
             >
               {item.name}
             </Link>
           ))}
         </div>
       </div>
-      <div className="border-t border-dashed border-white/35" />
+      <div className="border-t border-dashed border-white/15" />
     </nav>
   );
 };

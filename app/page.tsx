@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <main className="min-h-screen w-full bg-black flex justify-center">
-      <div className="w-full max-w-3xl border-l border-r border-dashed border-white/35 flex flex-col min-h-screen">
+      <div className="w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl border-l border-r border-dashed border-white/35 flex flex-col min-h-screen">
         <Navbar />
         <Hero />
         <GitHubContributions />

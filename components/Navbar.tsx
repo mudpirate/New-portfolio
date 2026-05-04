@@ -10,7 +10,7 @@ const navLinks = [
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm w-full">
-      <div className="px-5 sm:px-8 py-4 flex items-center justify-between">
+      <div className="px-5 sm:px-8 lg:px-10 xl:px-12 py-4 flex items-center justify-between">
         <Link href="/" className="w-9 h-9 rounded-full overflow-hidden border border-white/25 flex-shrink-0">
           <Image
             src="/avatar.jpeg"

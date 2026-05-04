@@ -41,40 +41,41 @@ const Tag = ({
 
 const Hero = () => {
   return (
-    <section className="px-5 sm:px-8 pt-10 pb-8">
-      <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+    <section className="px-5 sm:px-8 lg:px-10 xl:px-12 pt-10 pb-8 md:pt-12 md:pb-10 lg:pt-14 lg:pb-12">
+      <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 lg:gap-12">
 
-        {/* Avatar — top on mobile, right on sm+ */}
+        {/* Avatar — hidden on mobile, shown sm+ */}
         <div className="order-2 hidden sm:flex flex-shrink-0 sm:pt-1
-                        w-36 h-49 sm:w-44 sm:h-64  md:w-52 md:h-72">
+                        sm:w-44 sm:h-64 md:w-52 md:h-72 lg:w-60 lg:h-80 xl:w-64 xl:h-88">
           <Image
             src="/avatar.jpeg"
             alt="Nomesh"
-            width={208}
-            height={256}
+            width={256}
+            height={352}
             className="w-full h-full object-cover border border-white/15"
           />
         </div>
 
-        {/* Text — below avatar on mobile, left on sm+ */}
+        {/* Text content */}
         <div className="order-2 sm:order-2 flex-1 min-w-0">
-          <h1 className="font-[family-name:var(--font-instrument-serif)] text-4xl sm:text-4xl md:text-5xl text-white tracking-tight mb-3 leading-tight">
+          <h1 className="font-[family-name:var(--font-instrument-serif)] text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-tight mb-3 leading-tight">
             Hi, I&apos;m Nomesh
           </h1>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/40 text-[10px] sm:text-xs tracking-widest mb-6">
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/40 text-[10px] sm:text-xs tracking-widest mb-5 sm:mb-6">
             Frontend&nbsp;•&nbsp;Backend&nbsp;•&nbsp;Devops&nbsp;•&nbsp;AI Agents&nbsp;•&nbsp;Automation
           </p>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed tracking-tight mb-4">
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed tracking-tight mb-3 sm:mb-2">
             I work across the full stack — from database design and backend APIs to responsive frontend interfaces — preferring to own features end-to-end.
           </p>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed mb-4">
-            Most of what I build is shaped by one question: does this stay fast and cost less as it scales?
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed mb-3 sm:mb-3">
+            Most of what I build is shaped by one question:{" "}
+            <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/70 text-sm sm:text-base lg:text-[17px] italic inline leading-relaxed">does this stay fast and cost less as it scales?</span>
           </p>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed mb-2 flex flex-wrap items-center gap-1.5">
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed flex flex-wrap items-center gap-1.5">
             Available for freelance or full-time roles. Slide into my{" "}
             <BadgeLink href="https://x.com/nomeshSingh_XD" icon="𝕏">
               DMs
@@ -89,12 +90,7 @@ const Hero = () => {
               LinkedIn
             </Tag>
             <span className="text-white/90">,</span>
-            <Tag href="/resume.pdf">Resume</Tag>{" "}
-          
-          </p>
-
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:140] text-white/70 text-sm sm:text-base leading-relaxed flex flex-wrap items-center gap-1.5">
-            
+            <Tag href="/resume.pdf">Resume</Tag>
           </p>
         </div>
 

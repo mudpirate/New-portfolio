@@ -16,8 +16,8 @@ interface Stats {
 }
 
 const theme = {
-  light: ["#111111", "#2a2a2a", "#4a4a4a", "#7a7a7a", "#c8c8c8"],
-  dark: ["#111111", "#2a2a2a", "#4a4a4a", "#7a7a7a", "#c8c8c8"],
+  light: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
 };
 
 const GitHubContributions = () => {
@@ -60,10 +60,10 @@ const GitHubContributions = () => {
   }, []);
 
   return (
-    <section className="px-5 sm:px-8 py-8 border-b border-white/15">
-      <div className="inline-block  px-1 py-2 mb-6">
-        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-8 leading-tight">
-        Github Contributions
+    <section className="px-5 sm:px-8 lg:px-10 xl:px-12 py-8 md:py-10 lg:py-12 border-b border-white/15">
+      <div className="inline-block py-2 mb-6">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+          Github Contributions
         </span>
       </div>
 
@@ -74,8 +74,6 @@ const GitHubContributions = () => {
           </span>{" "}
           <span className="text-white/45">contributions</span>
         </span>
-        
-      
       </div>
 
       <div className="overflow-x-auto pb-2 github-calendar-wrapper">

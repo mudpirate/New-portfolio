@@ -52,11 +52,10 @@ const Experience = () => {
   };
 
   return (
-    <section id="about" className="px-5 sm:px-8 py-8 border-t border-dashed border-white/35">
-      {/* Geist Mono section label */}
-       <div className="inline-block  px-1 py-2 mb-6">
-        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-8 leading-tight">
-        Places I&apos;ve Made an Impact
+    <section id="about" className="px-5 sm:px-8 lg:px-10 xl:px-12 py-8 md:py-10 lg:py-12 border-t border-dashed border-white/35">
+      <div className="inline-block px-1 py-2 mb-6 lg:mb-8">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+          Places I&apos;ve Made an Impact
         </span>
       </div>
 
@@ -67,20 +66,17 @@ const Experience = () => {
             <div key={job.id} className="border border-dashed border-white/35">
               <button
                 onClick={() => toggle(job.id)}
-                className="w-full text-left px-5 sm:px-6 pt-4 pb-3 flex items-start justify-between gap-4 group"
+                className="w-full text-left px-5 sm:px-6 lg:px-8 pt-4 pb-3 flex items-start justify-between gap-4 group"
               >
                 <div className="flex flex-col gap-1.5 min-w-0">
-                  {/* Instrument Serif company name */}
                   <div className="flex items-center gap-2">
-                    <span className="font-[family-name:var(--font-instrument-serif)] text-xl sm:text-2xl text-white leading-tight">
+                    <span className="font-[family-name:var(--font-instrument-serif)] text-xl sm:text-2xl lg:text-3xl text-white leading-tight">
                       {job.company}
                     </span>
-                    
                   </div>
 
-                  {/* Geist Mono for role / badge / date */}
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400]  text-white/50 text-xs tracking-tight">
+                    <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/50 text-xs lg:text-sm tracking-tight">
                       {job.role}
                     </span>
                     <span className="font-[family-name:var(--font-geist-mono)] text-xs px-1.5 py-0.5 border border-white/20 text-white/40 tracking-tight">
@@ -99,7 +95,7 @@ const Experience = () => {
               </button>
 
               {isOpen && (
-                <ul className="px-5 sm:px-6 pb-5 flex flex-col gap-2">
+                <ul className="px-5 sm:px-6 lg:px-8 pb-5 lg:pb-6 flex flex-col gap-2 lg:gap-3">
                   {job.bullets.map((bullet, i) => {
                     const isTechStack = bullet.startsWith("Tech Stack:");
                     return (
@@ -115,7 +111,7 @@ const Experience = () => {
                             </span>
                           </span>
                         ) : (
-                          <span className="text-sm text-white/60 leading-relaxed">
+                          <span className="text-sm lg:text-[15px] text-white/60 leading-relaxed">
                             {bullet}
                           </span>
                         )}

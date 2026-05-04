@@ -26,10 +26,10 @@ const DelhiClock = () => {
 
 const Footer = () => {
   return (
-    <footer className="px-5 sm:px-8 mt-auto">
-      <div className="border-t border-dashed border-white/35 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+    <footer className="px-5 sm:px-8 lg:px-10 xl:px-12 mt-auto">
+      <div className="border-t border-dashed border-white/35 py-5 lg:py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
         <div className="flex flex-col gap-0.5">
-          <p className="text-white/50 text-sm">
+          <p className="text-white/50 text-sm lg:text-[15px]">
             Designed &amp; Developed by{" "}
             <span className="text-white/80 font-semibold">Nomesh</span>
           </p>

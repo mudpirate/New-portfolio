@@ -34,7 +34,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="border-t border-dashed border-white/15" />
+      <div className="border-t border-dashed border-white/40" />
     </nav>
   );
 };

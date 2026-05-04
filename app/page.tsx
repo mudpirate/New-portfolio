@@ -8,6 +8,8 @@ import RecentProjects from "@/components/RecentProjects";
 import BlogSection from "@/components/BlogSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import GitHubContributions from "@/components/GitHubContributions";
+import Skills from "@/components/Skills";
 
 const Home = () => {
   useEffect(() => {
@@ -19,8 +21,10 @@ const Home = () => {
       <div className="w-full max-w-3xl border-l border-r border-dashed border-white/35 flex flex-col min-h-screen">
         <Navbar />
         <Hero />
+        <GitHubContributions />
         <Experience />
         <RecentProjects />
+        <Skills />
         <BlogSection />
         <Contact />
         <Footer />

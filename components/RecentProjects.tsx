@@ -108,8 +108,8 @@ const RecentProjects = () => {
 
   return (
     <section id="projects" className="px-5 sm:px-8 py-8 border-t border-dashed border-white/35">
-      <div className="inline-block border border-dashed border-white/35 px-4 py-2 mb-6">
-        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/80 text-xs sm:text-sm tracking-tight">
+      <div className="inline-block  px-1 py-2 mb-6">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-8 leading-tight">
           Things I&apos;ve Built
         </span>
       </div>

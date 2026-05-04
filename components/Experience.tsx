@@ -56,7 +56,7 @@ const Experience = () => {
       {/* Geist Mono section label */}
        <div className="inline-block  px-1 py-2 mb-6">
         <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-8 leading-tight">
-        Places I've Made an Impact
+        Places I&apos;ve Made an Impact
         </span>
       </div>
 

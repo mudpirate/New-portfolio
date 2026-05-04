@@ -89,7 +89,7 @@ const Skills = () => {
   return (
     <section className="px-5 sm:px-8 lg:px-10 xl:px-12 py-8 md:py-10 lg:py-12 border-b border-white/15">
       <div className="inline-block px-1 py-2 mb-6 lg:mb-8">
-        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+        <span className="font-[family-name:var(--font-geist-sans)] [font-weight:100] text-2xl sm:text-2xl md:text-2xl lg:text-3xl text-white tracking-tight leading-tight">
           Skills
         </span>
       </div>

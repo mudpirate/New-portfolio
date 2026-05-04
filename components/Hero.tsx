@@ -41,11 +41,11 @@ const Tag = ({
 
 const Hero = () => {
   return (
-    <section className="px-5 sm:px-8 lg:px-10 xl:px-12 pt-10 pb-8 md:pt-12 md:pb-10 lg:pt-14 lg:pb-12">
+    <section className="px-5 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-14">
       <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 lg:gap-12">
 
         {/* Avatar — hidden on mobile, shown sm+ */}
-        <div className="order-2 hidden sm:flex flex-shrink-0 sm:pt-1
+        <div className="order-2 hidden sm:flex flex-shrink-0
                         sm:w-44 sm:h-64 md:w-52 md:h-72 lg:w-60 lg:h-80 xl:w-64 xl:h-88">
           <Image
             src="/avatar.jpeg"
@@ -58,7 +58,7 @@ const Hero = () => {
 
         {/* Text content */}
         <div className="order-2 sm:order-2 flex-1 min-w-0">
-          <h1 className="font-[family-name:var(--font-instrument-serif)] text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-tight mb-3 leading-tight">
+          <h1 className="font-[family-name:var(--font-instrument-serif)] text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tight mb-3 leading-tight">
             Hi, I&apos;m Nomesh
           </h1>
 
@@ -66,17 +66,17 @@ const Hero = () => {
             Frontend&nbsp;•&nbsp;Backend&nbsp;•&nbsp;Devops&nbsp;•&nbsp;AI Agents&nbsp;•&nbsp;Automation
           </p>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed tracking-tight mb-3 sm:mb-2">
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed tracking-tight mb-3 sm:mb-2 lg:mb-7">
             I work across the full stack — from database design and backend APIs to responsive frontend interfaces — preferring to own features end-to-end.
           </p>
 
-          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed mb-3 sm:mb-3">
+          <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed mb-3 lg:mb-7 sm:mb-3">
             Most of what I build is shaped by one question:{" "}
             <span className="font-[family-name:var(--font-geist-sans)] [font-weight:400] text-white/70 text-sm sm:text-base lg:text-[17px] italic inline leading-relaxed">does this stay fast and cost less as it scales?</span>
           </p>
 
           <p className="font-[family-name:var(--font-geist-sans)] [font-weight:200] text-white/70 text-sm sm:text-base lg:text-[17px] leading-relaxed flex flex-wrap items-center gap-1.5">
-            Available for freelance or full-time roles. Slide into my{" "}
+            Available for freelance, internship and full-time roles. Slide into my{" "}
             <BadgeLink href="https://x.com/nomeshSingh_XD" icon="𝕏">
               DMs
             </BadgeLink>{" "}

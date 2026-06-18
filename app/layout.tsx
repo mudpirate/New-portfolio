@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Instrument_Serif } from "next/font/google";
+import Script from 'next/script';
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Script src="http://localhost:3001/widget.js" data-workspace-id="261aef92-f66b-40b9-b964-61ed0c301aa4" strategy="lazyOnload" />
       </body>
     </html>
   );
